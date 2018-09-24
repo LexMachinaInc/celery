@@ -18,7 +18,7 @@ import threading
 
 from time import sleep
 
-from kombu.async.semaphore import DummyLock
+from kombu.async_.semaphore import DummyLock
 
 from celery import bootsteps
 from celery.five import monotonic
