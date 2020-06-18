@@ -37,7 +37,7 @@ try:
 except ImportError:  # Py2
     from inspect import formatargspec, getargspec  # noqa
 
-from sphinx.domains.python import PyModulelevel
+from sphinx.domains.python import PyFunction
 from sphinx.ext.autodoc import FunctionDocumenter
 
 from celery.app.task import BaseTask
@@ -64,7 +64,7 @@ class TaskDocumenter(FunctionDocumenter):
         pass
 
 
-class TaskDirective(PyModulelevel):
+class TaskDirective(PyFunction):
 
     def get_signature_prefix(self, sig):
         return self.env.config.celery_task_prefix
