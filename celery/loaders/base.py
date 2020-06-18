@@ -8,7 +8,7 @@
 """
 from __future__ import absolute_import
 
-import anyjson
+import json
 import imp as _imp
 import importlib
 import os
@@ -178,7 +178,7 @@ class BaseLoader(object):
     def cmdline_config_parser(
             self, args, namespace='celery',
             re_type=re.compile(r'\((\w+)\)'),
-            extra_types={'json': anyjson.loads},
+            extra_types={'json': json.loads},
             override_types={'tuple': 'json',
                             'list': 'json',
                             'dict': 'json'}):

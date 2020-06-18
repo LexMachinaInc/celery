@@ -2,7 +2,7 @@ from __future__ import absolute_import
 
 import sys
 
-from anyjson import dumps
+from json import dumps
 from datetime import datetime
 
 from celery import __main__

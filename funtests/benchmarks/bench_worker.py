@@ -8,13 +8,6 @@ os.environ.update(
     USE_FAST_LOCALS='yes',
 )
 
-import anyjson  # noqa
-JSONIMP = os.environ.get('JSONIMP')
-if JSONIMP:
-    anyjson.force_implementation(JSONIMP)
-
-print('anyjson implementation: {0!r}'.format(anyjson.implementation.name))
-
 from celery import Celery, group  # noqa
 from celery.five import range  # noqa
 from kombu.five import monotonic  # noqa

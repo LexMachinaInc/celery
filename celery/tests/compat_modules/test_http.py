@@ -8,7 +8,7 @@ try:
 except ImportError:  # py3k
     from urllib.request import addinfourl  # noqa
 
-from anyjson import dumps
+from json import dumps
 from kombu.utils.encoding import from_utf8
 
 from celery.five import WhateverIO, items

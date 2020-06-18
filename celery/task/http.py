@@ -8,7 +8,7 @@
 """
 from __future__ import absolute_import
 
-import anyjson
+import json
 import sys
 
 try:
@@ -62,7 +62,7 @@ class UnknownStatusError(InvalidResponseError):
     """The remote server gave an unknown status."""
 
 
-def extract_response(raw_response, loads=anyjson.loads):
+def extract_response(raw_response, loads=json.loads):
     """Extract the response text from a raw JSON response."""
     if not raw_response:
         raise InvalidResponseError('Empty response')
