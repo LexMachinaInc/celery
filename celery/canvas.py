@@ -285,7 +285,7 @@ class Signature(dict):
         return NotImplemented
 
     def __ior__(self, other):
-        return self.__or__(other)
+        return self | other
 
     def __deepcopy__(self, memo):
         memo[id(self)] = self
